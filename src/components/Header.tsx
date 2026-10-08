@@ -18,18 +18,18 @@ const Header = () => {
                             <span className='bg-green-800 p-3 rounded-lg'>🛒</span>
 
                             <div>
-                                <h1 className='text-2xl font-bold'>বাজার দর</h1>
-                                <span className='text-neutral-500 text-sm font-medium'>{date}</span>
+                                <h1 className='text-md sm:text-2xl font-bold'>বাজার দর</h1>
+                                <span className='text-neutral-500 text-xs sm:text-sm font-medium'>{date}</span>
                             </div>
                         </Link>
                     </div>
 
                     <div className='flex gap-1 items-center'>
                         <Link href={'#'}>
-                            <button className='font-bold text-lg py-1 px-4 hover:bg-gray-100 rounded-lg cursor-pointer border'>সাইন ইন</button> 
+                            <button className='font-bold text-sm sm:text-lg py-1 px-4 hover:bg-gray-100 rounded-lg cursor-pointer border'>সাইন ইন</button> 
                         </Link>
                         <Link href={'#'}>
-                            <button className='bg-green-900 font-bold text-lg text-white py-1 px-4 rounded-lg cursor-pointer'>সাইন আপ</button>
+                            <button className='bg-green-900 font-bold text-sm sm:text-lg text-white py-1 px-4 rounded-lg cursor-pointer'>সাইন আপ</button>
                         </Link>
                     </div>
                 </div>
