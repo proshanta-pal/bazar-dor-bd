@@ -5,7 +5,7 @@ import React from 'react';
 const NavLinks = async () => {
     const res = await fetch('https://api.api-store.workers.dev/api/bazardor/categories');
     const data: CategoryTypes[] = await res.json();
-    console.log(data);
+    // console.log(data);
 
     return (
         <nav className='flex gap-5 px-4 sm:max-w-7xl sm:mx-auto my-2 flex-wrap'>
