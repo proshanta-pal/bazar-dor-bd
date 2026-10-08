@@ -1,3 +1,10 @@
+interface Market {
+  market: string;
+  division: string;
+  min: number;
+  max: number;
+}
+
 export interface ProductTypes {
     id: number;
     slug: string;
@@ -15,4 +22,5 @@ export interface ProductTypes {
         dir: 'up' | 'down' | 'flat',
         pct: number;
     },
+    markets: Market[];
 }
