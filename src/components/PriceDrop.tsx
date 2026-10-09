@@ -6,7 +6,7 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 const PriceDrop = async ({data} : {data: ProductTypes[]}) => {
     
     // console.log(data);
-    const topProducts = data.sort((a, b) => a.change.pct - b.change.pct);
+    const topProducts = [...data].sort((a, b) => a.change.pct - b.change.pct);
 
 
     return (

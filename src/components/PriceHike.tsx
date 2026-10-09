@@ -6,7 +6,7 @@ import { IoMdArrowDropup } from 'react-icons/io';
 const PriceHike = async ({data} : {data: ProductTypes[]}) => {
     
     // console.log(data);
-    const topProducts = data.sort((a, b) => b.change.pct - a.change.pct);
+    const topProducts = [...data].sort((a, b) => b.change.pct - a.change.pct);
 
 
     return (
