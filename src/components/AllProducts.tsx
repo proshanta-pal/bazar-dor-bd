@@ -27,34 +27,6 @@ const AllProducts = ({data} : {data: ProductTypes[]}) => {
                     <p className='text-sm sm:text-lg text-gray-600 font-medium pb-3'>মোট {toBengaliNumber(data.length)} টি পণ্য দেখানো হচ্ছে</p>
                 </div>
 
-                {/* <div className='flex items-center gap-2 self-end pb-3'>
-                    <label className='text-lg text-neutral-600'
-                    htmlFor="sort-products">সাজান</label>
-
-                    <Select className="w-38" placeholder='ডিফল্ট'>
-                        <Select.Trigger>
-                            <Select.Value />
-                            <Select.Indicator />
-                        </Select.Trigger>
-
-                        <Select.Popover>
-                            <ListBox>
-                                <ListBox.Item id="default1" textValue="default">
-                                    ডিফল্ট
-                                    <ListBox.ItemIndicator />
-                                </ListBox.Item>
-                                <ListBox.Item id="lowtohigh" textValue="low to high">
-                                    দাম: কম থেকে বেশি
-                                    <ListBox.ItemIndicator />
-                                </ListBox.Item>
-                                <ListBox.Item id="hightolow" textValue="high to low">
-                                    দাম: বেশি থেকে কম 
-                                    <ListBox.ItemIndicator />
-                                </ListBox.Item>
-                            </ListBox>
-                        </Select.Popover>
-                    </Select>
-                </div> */}
                 <Sorting sortBy={sortBy} onSortChange={setSortBy}/>
             </div>
 
