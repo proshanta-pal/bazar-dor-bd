@@ -20,7 +20,7 @@ const AllProducts = ({data} : {data: ProductTypes[]}) => {
     }
 
     return (
-        <section className='max-w-7xl mx-auto mb-4'>
+        <section className='max-w-7xl mx-auto mb-20'>
             <div className='flex justify-between'>
                 <div>
                     <h2 className='text-2xl font-bold text-black pt-7 pb-2'>সব পণ্য</h2>
