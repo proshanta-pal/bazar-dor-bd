@@ -11,7 +11,6 @@ interface SortingProps{
 
 const Sorting = ({sortBy, onSortChange}: SortingProps) => {
 
-
   return (
     <div className="flex items-center gap-2 self-end pb-1 sm:pb-3">
       <label className="text-lg text-neutral-600" htmlFor="sort-products">
@@ -32,7 +31,7 @@ const Sorting = ({sortBy, onSortChange}: SortingProps) => {
 
         <Select.Popover>
           <ListBox>
-            <ListBox.Item id="default1" textValue="ডিফল্ট">
+            <ListBox.Item id="default" textValue="ডিফল্ট">
               ডিফল্ট
               <ListBox.ItemIndicator />
             </ListBox.Item>

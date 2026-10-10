@@ -3,7 +3,6 @@ import ProductPriceDetailsCard from '@/components/ProductPriceDetailsCard';
 import { ProductTypes } from '@/types/productTypes';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import React from 'react';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
 

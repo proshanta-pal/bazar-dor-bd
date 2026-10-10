@@ -1,5 +1,4 @@
 import { ProductTypes } from '@/types/productTypes';
-import React from 'react';
 import ProductCard from './ProductCard';
 import { IoMdArrowDropup } from 'react-icons/io';
 

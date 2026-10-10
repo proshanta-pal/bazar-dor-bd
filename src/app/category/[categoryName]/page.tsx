@@ -1,7 +1,6 @@
-import ProductCard from '@/components/ProductCard';
+import CategoryProducts from '@/components/CategoryProducts';
 import { ProductTypes } from '@/types/productTypes';
 import { toBengaliNumber } from '@/utils/convertNumbers';
-import React from 'react';
 
 const CategoryPage = async ({params} : {params: Promise<{categoryName: string}>}) => {
     const {categoryName} = await params;
@@ -21,20 +20,7 @@ const CategoryPage = async ({params} : {params: Promise<{categoryName: string}>}
                     </div>
                 </div>
 
-                <div>
-                    <div className='flex justify-between py-4'>
-                        <p className='text-lg text-gray-600'>মোট {toBengaliNumber(categoriesData.length)}টি পণ্য দেখানো হচ্ছে</p>
-                        <div>
-                            hello
-                        </div>
-                    </div>
-                </div>
-
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3'>
-                    {
-                        categoriesData.map(item => <ProductCard key={item.id} item={item}/>)
-                    }
-                </div>
+                <CategoryProducts data={categoriesData}/>
             </div>
 
 

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 import NavLinks from './NavLinks';
 import { CategoryTypes } from '@/types/categoryTypes';
 import UserInfo from './UserInfo';

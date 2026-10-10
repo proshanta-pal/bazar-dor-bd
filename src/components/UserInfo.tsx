@@ -1,7 +1,6 @@
 'use client'
 import { signOut, useSession } from "@/lib/auth-client";
 import Link from "next/link";
-import React from "react";
 import { ListBox, Select } from "@heroui/react";
 import { redirect } from "next/navigation";
 import { useState } from 'react';

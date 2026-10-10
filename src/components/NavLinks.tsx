@@ -2,7 +2,6 @@
 import { CategoryTypes } from '@/types/categoryTypes';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
 
 const NavLinks = ({data} : {data: CategoryTypes[]}) => {
     

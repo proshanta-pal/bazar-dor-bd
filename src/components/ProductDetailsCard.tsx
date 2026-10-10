@@ -1,6 +1,5 @@
 import { ProductTypes } from '@/types/productTypes';
 import { toBengaliNumber } from '@/utils/convertNumbers';
-import React from 'react';
 import { GrFormSubtract } from 'react-icons/gr';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 

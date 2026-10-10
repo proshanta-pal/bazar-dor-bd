@@ -1,10 +1,9 @@
 'use client'
 import { ProductTypes } from '@/types/productTypes';
 import { toBengaliNumber } from '@/utils/convertNumbers';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ProductCard from './ProductCard';
 import Sorting, { SortBy } from './Sorting';
-// import {Label, ListBox, Select} from "@heroui/react";
 
 const AllProducts = ({data} : {data: ProductTypes[]}) => {
     // console.log(data);

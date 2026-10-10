@@ -1,5 +1,3 @@
-import React from 'react';
-
 const SkeletonCard = () => {
   return (
     <div className="rounded-[22px] border border-[#dfe6df] bg-[#fafcfb] p-5 animate-pulse">

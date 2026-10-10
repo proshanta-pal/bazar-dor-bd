@@ -2,7 +2,6 @@ import Banner from '@/components/Banner';
 import PriceHike from '@/components/PriceHike';
 import PriceDrop from '@/components/PriceDrop';
 import { ProductTypes } from '@/types/productTypes';
-import React from 'react';
 import AllProducts from '@/components/AllProducts';
 
 const Home = async () => {

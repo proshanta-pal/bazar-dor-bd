@@ -1,6 +1,5 @@
 import { ProductTypes } from '@/types/productTypes';
 import { toBengaliNumber } from '@/utils/convertNumbers';
-import React from 'react';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 import MarqueeText from "react-marquee-text"
 import "react-marquee-text/dist/styles.css"

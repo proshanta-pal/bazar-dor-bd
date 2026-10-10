@@ -12,8 +12,8 @@ const notoSerifBengali = Noto_Serif_Bengali({
 
 
 export const metadata: Metadata = {
-  title: "বাজার দর",
-  description: "An e-commerce application using Next.js",
+  title: "বাজার দর — আজকের দাঁড়ির দাম",
+  description: "Layout page for bazar dor application",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
