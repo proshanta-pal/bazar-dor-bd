@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Bazar Dor - Market Price Tracking Application using Next.js
 
-## Getting Started
+**Bazar Dor (বাজার দর)** is a modern, responsive market price application designed to help users browse essential products and compare their prices across different markets. It presents price information in a clear, accessible format so users can make more informed shopping decisions.
 
-First, run the development server:
+The application provides a clean interface with number formatting in Bengali, product details, market price comparisons, and account features — helping users check prices more conveniently.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠️ Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **React**
+- **Next.js**
+- **TypeScript**
+- **Tailwind CSS**
+- **HeroUI**
+- **Better Auth**
+- **MongoDB**
+- **React Hot Toast**
+- **React Icons**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 🛍️ **Product Listings:** Browse essential products and view their market prices.
 
-## Learn More
+- 📊 **Market Price Comparison:** Compare prices from different markets and identify the lowest available price.
 
-To learn more about Next.js, take a look at the following resources:
+- 📈 **Price Change Indicators:** View price movement indicators to quickly spot increases, decreases, and unchanged prices.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🔎 **Product Details:** Open a product page to view more detailed pricing information.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 🇧🇩 **Bengali Localization:** Display Bengali text and Bengali numerals for a more familiar experience for local users.
 
-## Deploy on Vercel
+- 👤 **User Authentication:** Create an account, sign in, manage profile information, and sign out using Better Auth.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 🔐 **Social Sign-In Setup:** Supports configuration for Google and GitHub authentication providers.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 📱 **Responsive Design:** Designed to work across desktop, tablet, and mobile screens.
+

@@ -4,13 +4,24 @@ import Link from "next/link";
 import React from "react";
 import { ListBox, Select } from "@heroui/react";
 import { redirect } from "next/navigation";
+import { useState } from 'react';
 
 const UserInfo = () => {
   const { data: session } = useSession();
   const user = session?.user;
 
+  const [shouldRedirect, setShouldRedirect] = useState(false);
+  
+  if (shouldRedirect) {
+      redirect("/");
+  }
+
   const handleSignout = async () => {
-    await signOut();
+    const {error} = await signOut();
+
+    if(!error){
+        setShouldRedirect(true);
+    }
   }
 
   return (

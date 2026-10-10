@@ -1,10 +1,18 @@
 'use client'
 import { signOut, updateUser, useSession } from '@/lib/auth-client';
 import { Button, Input, Label } from '@heroui/react';
+import { redirect } from "next/navigation";
+import { useState } from 'react';
 
 const ProfilePage = () => {
     const {data: session} = useSession();
     const user = session?.user;
+
+    const [shouldRedirect, setShouldRedirect] = useState(false);
+
+    if (shouldRedirect) {
+        redirect("/");
+    }
 
     const handleUpdateProfile = async (e: React.SubmitEvent<HTMLElement>) => {
         e.preventDefault();
@@ -17,7 +25,12 @@ const ProfilePage = () => {
     }
 
     const handleSignoutProfile = async () => {
-        await signOut();
+        const {error} = await signOut();
+
+        if(!error){
+            setShouldRedirect(true);
+        }
+
     }
 
 
