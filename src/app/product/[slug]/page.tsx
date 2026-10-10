@@ -11,7 +11,7 @@ const ProductPage = async ({params} : {params: Promise<{slug: string}>}) => {
     const { slug } = await params;
     console.log(slug);
 
-    const res = await fetch(`https://api.api-store.workers.dev/api/bazardor/products`);
+    const res = await fetch(`https://api.abcz.workers.dev/api/bazardor/products`);
     const products: ProductTypes[] = await res.json();
     // console.log(products);
 
