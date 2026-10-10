@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import NavLinks from './NavLinks';
 import { CategoryTypes } from '@/types/categoryTypes';
+import UserInfo from './UserInfo';
 
 const Header = async () => {
     const date = new Date().toLocaleDateString("bn-BD", {
@@ -30,14 +31,7 @@ const Header = async () => {
                             </Link>
                         </div>
 
-                        <div className='flex gap-1 items-center'>
-                            <Link href={'/signin'}>
-                                <button className='font-bold text-sm sm:text-lg py-1 px-4 hover:bg-gray-100 rounded-lg cursor-pointer border'>সাইন ইন</button> 
-                            </Link>
-                            <Link href={'/signup'}>
-                                <button className='bg-green-700 font-bold text-sm sm:text-lg text-white py-1 px-4 rounded-lg cursor-pointer'>সাইন আপ</button>
-                            </Link>
-                        </div>
+                        <UserInfo />
                     </div>
                 </div>
 
