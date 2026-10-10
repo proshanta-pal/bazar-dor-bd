@@ -1,11 +1,8 @@
 'use client'
 import { signOut, updateUser, useSession } from '@/lib/auth-client';
 import { Button, Input, Label } from '@heroui/react';
-import { useState } from 'react';
 
 const ProfilePage = () => {
-    const [show, setShow] = useState<boolean>(false);
-
     const {data: session} = useSession();
     const user = session?.user;
 
@@ -14,7 +11,7 @@ const ProfilePage = () => {
         const formData = new FormData(e.target);
         const updatedData = Object.fromEntries(formData.entries());
 
-        const {data, error} = await updateUser({
+        await updateUser({
             ...updatedData
         })
     }
