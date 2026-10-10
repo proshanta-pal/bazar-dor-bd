@@ -1,11 +1,16 @@
 import Link from 'next/link';
 import React from 'react';
 import NavLinks from './NavLinks';
+import { CategoryTypes } from '@/types/categoryTypes';
 
-const Header = () => {
+const Header = async () => {
     const date = new Date().toLocaleDateString("bn-BD", {
         dateStyle: "full"
     })
+
+    const res = await fetch('https://api.api-store.workers.dev/api/bazardor/categories');
+    const data: CategoryTypes[] = await res.json();
+    // console.log(data);
 
     return (
         <header className='mt-2 border-b-2 border-gray-200'>
@@ -15,7 +20,7 @@ const Header = () => {
                     <div>
                         <Link href={'/'}
                         className='flex items-center gap-2'>
-                            <span className='bg-green-800 p-3 rounded-lg'>🛒</span>
+                            <span className='bg-green-700 p-3 rounded-lg'>🛒</span>
 
                             <div>
                                 <h1 className='text-md sm:text-2xl font-bold'>বাজার দর</h1>
@@ -29,13 +34,13 @@ const Header = () => {
                             <button className='font-bold text-sm sm:text-lg py-1 px-4 hover:bg-gray-100 rounded-lg cursor-pointer border'>সাইন ইন</button> 
                         </Link>
                         <Link href={'#'}>
-                            <button className='bg-green-900 font-bold text-sm sm:text-lg text-white py-1 px-4 rounded-lg cursor-pointer'>সাইন আপ</button>
+                            <button className='bg-green-700 font-bold text-sm sm:text-lg text-white py-1 px-4 rounded-lg cursor-pointer'>সাইন আপ</button>
                         </Link>
                     </div>
                 </div>
             </div>
 
-            <NavLinks />
+            <NavLinks data={data}/>
         </header>
     );
 };

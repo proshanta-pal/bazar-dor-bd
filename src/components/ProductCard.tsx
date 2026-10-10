@@ -9,7 +9,7 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 
 const ProductCard = ({item}: {item: ProductTypes}) => {
     return (
-        <Link href={`/product/${item.slug}`}>
+        <Link href={`/product/${item.slug}`} className='hover:border hover:border-green-600 hover:rounded-xl hover:shadow-md hover:transition-all hover:duration-100'>
             <div className='border border-gray-200 rounded-xl bg-white p-4'>
 
                 <div className='flex items-center gap-2'>

@@ -24,7 +24,7 @@ const ProductPage = async ({params} : {params: Promise<{slug: string}>}) => {
             <div className='flex gap-3 items-center'>
                 <Link href={'/'} className='hover:underline text-neutral-700'>হোম</Link>
                 <MdKeyboardArrowRight size={22}/>
-                <Link href={`/`} className='hover:underline text-neutral-700'>{product?.categoryNameBn}</Link>
+                <Link href={`/category/${product.category}`} className='hover:underline text-neutral-700'>{product?.categoryNameBn}</Link>
                 <MdKeyboardArrowRight size={22}/>
                 <p className='text-neutral-700'>{product?.nameBn}</p>
             </div>
@@ -34,6 +34,9 @@ const ProductPage = async ({params} : {params: Promise<{slug: string}>}) => {
             <div>
                 <ProductPriceDetailsCard product={product} />
             </div>
+            <Link href={`/category/${product.category}`}>
+                <div className='py-2 px-3 my-5 inline-block rounded-lg font-semibold text-lg hover:bg-gray-300 hover:transition-all hover:duration-300'>{product.categoryIcon}সব {product.categoryNameBn}</div>
+            </Link>
         </section>
     );
 };
