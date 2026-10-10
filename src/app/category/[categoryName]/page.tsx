@@ -6,7 +6,7 @@ import React from 'react';
 const CategoryPage = async ({params} : {params: Promise<{categoryName: string}>}) => {
     const {categoryName} = await params;
 
-    const res = await fetch(`https://api.abcz.workers.dev/api/bazardor/products?category=${categoryName}`);
+    const res = await fetch(`https://openapi.programming-hero.com/api/bazardor/products?category=${categoryName}`);
     const categoriesData: ProductTypes[] = await res.json();
     console.log(categoriesData);
 
