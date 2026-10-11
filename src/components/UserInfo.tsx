@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ListBox, Select } from "@heroui/react";
 import { redirect } from "next/navigation";
 import { useState } from 'react';
+import toast from "react-hot-toast";
 
 const UserInfo = () => {
   const { data: session } = useSession();
@@ -19,7 +20,12 @@ const UserInfo = () => {
     const {error} = await signOut();
 
     if(!error){
+        toast.success("সফলভাবে সাইন আউট হয়েছে!");
         setShouldRedirect(true);
+    }
+    if (error) {
+        toast.error("সাইন আউট করা যায়নি।");
+        return;
     }
   }
 

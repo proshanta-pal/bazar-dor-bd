@@ -3,6 +3,7 @@ import { signOut, updateUser, useSession } from '@/lib/auth-client';
 import { Button, Input, Label } from '@heroui/react';
 import { redirect } from "next/navigation";
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const ProfilePage = () => {
     const {data: session} = useSession();
@@ -28,7 +29,12 @@ const ProfilePage = () => {
         const {error} = await signOut();
 
         if(!error){
+            toast.success("সফলভাবে সাইন আউট হয়েছে!");
             setShouldRedirect(true);
+        }
+        if (error) {
+            toast.error("সাইন আউট করা যায়নি।");
+            return;
         }
 
     }
